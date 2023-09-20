@@ -1,0 +1,16 @@
+.App {
+  font-family: sans-serif;
+  min-width: 600px;
+  text-align: center;
+}
+
+#root {
+  justify-content: center;
+  margin: 0;
+}
+
+body {
+  justify-content: center;
+  margin: 0;
+}
+
