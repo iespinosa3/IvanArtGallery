@@ -2,7 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { Button } from "@mui/material";
-import CurrencyFormat from "react-currency-format";
+
 import { useStateValue } from "./StateProvider";
 import { getBasketTotal } from "./reducer";
 import "./styles.css";
@@ -23,24 +23,14 @@ export default function Subtotal() {
           padding: "20px"
         }}
       >
-        {console.log(basket)}
-        <CurrencyFormat
-          renderText={(value) => (
-            <>
+        
               <p>
-                Subtotal ({basket.length} items): <strong>{value}</strong>
+                Subtotal ({basket.length} items): <strong>{getBasketTotal(basket)}</strong>
               </p>
               <small className="subtotal-gifts">
                 <input type="checkbox" /> This order is a gift.
               </small>
-            </>
-          )}
-          decimalScale={2}
-          value={getBasketTotal(basket)}
-          displayType={"text"}
-          thousandSeparator={true}
-          prefix={"$"}
-        />
+            
 
         <Button
           className="checkout-button"

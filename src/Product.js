@@ -8,8 +8,7 @@ const MARGIN_SEPERATION = { margin: "10px 0" };
 export default function Product({ id, title, image, price, rating, qty }) {
   const [state, dispatch] = useStateValue();
   const addToBasket = () => {
-    for (var b of basket) {
-    }
+   
     dispatch({
       type: "ADD_TO_BASKET",
       item: {
